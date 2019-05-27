@@ -29,10 +29,10 @@ Configuration:
 要进行更多的自定义配置，请使用下面的选项。
 
 ### 其他配置
-Fine tuning of the installation directories:
+对安装目录的其他配置（建议使用默认配置，所以在此不做翻译整理）
 
-  * --bindir=DIR            user executables [EPREFIX/bin]
-  * --sbindir=DIR           system admin executables [EPREFIX/sbin]
+  * --bindir=DIR            可执行文件的路径[EPREFIX/bin]
+  * --sbindir=DIR           系统管理可执行文件目录[EPREFIX/sbin]
   * --libexecdir=DIR        program executables [EPREFIX/libexec]
   * --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
   * --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
@@ -72,36 +72,30 @@ Fine tuning of the installation directories:
 
 ### SAPI模块:
 
-  * --with-apxs2=FILE       Build shared Apache 2.0 Handler module. FILE is the optional
-                          pathname to the Apache apxs tool apxs
-  * --disable-cli           Disable building CLI version of PHP
-                          (this forces --without-pear)
-  * --enable-embed=TYPE     EXPERIMENTAL: Enable building of embedded SAPI library
-                          TYPE is either 'shared' or 'static'. TYPE=shared
-  * --enable-fpm            Enable building of the fpm SAPI executable
-  * --with-fpm-user=USER    Set the user for php-fpm to run as. (default: nobody)
-  * --with-fpm-group=GRP    Set the group for php-fpm to run as. For a system user, this should usually be set to match the fpm username (default: nobody)
+  * --with-apxs2=FILE       构建共享的Apache 2.0 Handler模块。 FILE是Apache apxs工具的可选路径名
+  * --disable-cli           不构建PHP的CLI版本（这会强制--without-pear）
+  * --enable-embed=TYPE     实验：启用嵌入式SAPI库的构建TYPE可以是“共享”或“静态”。[TYPE = shared]
+  * --enable-fpm            构建fpm SAPI 可执行文件
+  * --with-fpm-user=USER    运行php-fpm的用户(默认: nobody)
+  * --with-fpm-group=GRP    运行php-fpm的组(默认: nobody)
   * --with-fpm-systemd      Activate systemd integration
-  * --with-fpm-acl          Use POSIX Access Control Lists
-  * --with-litespeed        Build PHP as litespeed module
-  * --enable-phpdbg         Build phpdbg
-  * --enable-phpdbg-webhelper
-                          Build phpdbg web SAPI support
-  * --enable-phpdbg-debug   Build phpdbg in debug mode
+  * --with-fpm-acl          使用POSIX访问控制列表
+  * --with-litespeed        将PHP构建为litespeed模块
+  * --enable-phpdbg         构建phpdbg
+  * --enable-phpdbg-webhelper 构建phpdbg Web SAPI
+  * --enable-phpdbg-debug   构建 phpdbg debug 模式
   * --enable-phpdbg-readline   Enable readline support in phpdbg (depends on static ext/readline)
-  * --disable-cgi           Disable building CGI version of PHP
-  * --with-valgrind=DIR     Enable valgrind support
+  * --disable-cgi           禁用构建PHP的CGI版本
+  * --with-valgrind=DIR     启用valgrind支持
 
 ### 常规设置
+建议使用默认配置
 
-  * --enable-gcov           Enable GCOV code coverage (requires LTP) - FOR DEVELOPERS ONLY!!
-  * --enable-debug          Compile with debugging symbols
-  * --with-layout=TYPE      Set how installed files will be laid out.  Type can
-                          be either PHP or GNU [PHP]
-  * --with-config-file-path=PATH
-                          Set the path in which to look for php.ini [PREFIX/lib]
-  * --with-config-file-scan-dir=PATH
-                          Set the path where to scan for configuration files
+  * --enable-gcov           启用GCOV代码覆盖（需要LTP） - 仅限开发人员！
+  * --enable-debug          使用调试符号进行编译
+  * --with-layout=TYPE      设置安装文件的布局方式。 类型可以是PHP或GNU [PHP]
+  * --with-config-file-path=PATH 设置php.ini的路径[PREFIX/lib]
+  * --with-config-file-scan-dir=PATH 设置扫描配置文件的路径
   * --enable-sigchild       Enable PHP's own SIGCHLD handler
   * --enable-libgcc         Enable explicitly linking against libgcc
   * --disable-short-tags    Disable the short-form <? start tag by default
@@ -114,13 +108,14 @@ Fine tuning of the installation directories:
 
   * --with-EXTENSION=shared[,PATH]
 
+    ```
     NOTE: Not all extensions can be build as 'shared'.
 
     Example: --with-foobar=shared,/usr/local/foobar/
 
       o Builds the foobar extension as shared extension.
       o foobar package install prefix is /usr/local/foobar/
-
+```
 
   * --disable-all           Disable all extensions which are enabled by default
 
