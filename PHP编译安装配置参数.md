@@ -115,7 +115,8 @@ Configuration:
 
       o Builds the foobar extension as shared extension.
       o foobar package install prefix is /usr/local/foobar/
-```
+   ```
+
 
   * --disable-all           Disable all extensions which are enabled by default
 
